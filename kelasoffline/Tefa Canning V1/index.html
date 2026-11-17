@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TEFA Canning Polije</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--c:#f6f4ec;--i:#1f2326;--g:#6b6e70;--b:#e8edf0;--y:#e8b85a;--l:#dcdcd4}
+body{font:15px/1.65 Inter,sans-serif;background:var(--c);color:var(--i)}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;line-height:1.15}
+h2{font-size:clamp(28px,3.4vw,42px)}h3{font-size:20px}
+a{color:inherit;text-decoration:none}ul,ol{list-style:none;padding:0}
+img{display:block;max-width:100%}[hidden]{display:none!important}
+.w{max-width:1160px;margin:0 auto;padding:0 28px}.sec{padding:72px 28px}
+.lb{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8f92;margin-bottom:14px}
+.btn{display:inline-block;background:var(--y);color:var(--i);font:600 14px Inter;padding:12px 22px;border-radius:3px;border:0;cursor:pointer}
+.btn.d{background:#4a4d4f;color:#fff}.lk{font-size:13px;color:var(--g);margin-left:14px}
+.g2,.g3,.g4,.f2{display:grid;gap:28px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.f2{grid-template-columns:1fr 1fr;gap:16px}
+.card{background:#fff;border:1px solid var(--l);border-radius:4px;padding:24px}
+.bl{background:var(--b)}.dk{background:#6b6e70;color:#fff}.dk .lb{color:#d3d6d7}
+.hero{min-height:100vh;background:linear-gradient(rgba(34,40,48,.74),rgba(34,40,48,.8)),url(img/gedung-tefa.jpg) center/cover;color:#fff;padding:32px 6vw 28px;display:flex;flex-direction:column}
+.hero.in{min-height:360px}.hero .lb{color:#e5e7e8}
+.brand{display:flex;align-items:center;gap:12px;font:600 13px Inter;letter-spacing:.04em}
+.logo{width:24px;height:24px;border-radius:50%;background:radial-gradient(#7bd3c4,#1c8f9a);border:2px solid #fff}
+.hb{margin-top:auto;padding-bottom:28px}.hb h1{font-size:clamp(40px,7vw,76px);letter-spacing:.02em;margin:6px 0 22px}
+.hr{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}.hr p{max-width:520px;font-size:14px}
+.hf{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.45);padding-top:14px;font-size:11px}
+.in .hr{display:none}
+nav{position:sticky;top:0;z-index:9;background:rgba(246,244,236,.96);border-bottom:1px solid var(--l)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav b{display:block;font:600 14px/1.2 Inter}nav small{font-size:10px;color:var(--g)}
+nav ul{display:flex;gap:28px;font-size:13px}nav li a{padding:6px 0;color:#555}nav li a.on{color:var(--i);border-bottom:2px solid var(--i)}
+.pc img{height:230px;width:100%;object-fit:contain;background:#fff;margin-bottom:16px}
+.pc p{color:var(--g);font-size:14px;margin:8px 0 12px}.tr{display:flex;justify-content:space-between;align-items:center}
+.tr button{border:1px solid var(--l);background:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;margin-left:6px}
+.ls li{display:flex;gap:18px;padding:16px 0;border-top:1px solid rgba(255,255,255,.35);font-size:14px}.ls b{font-weight:500;color:#d8dadb}
+.st{display:flex;gap:48px;margin-top:28px}.st b{font:400 40px 'Playfair Display'}.st small{display:block;font-size:11px;letter-spacing:.12em;color:var(--g)}
+.ab img{border-radius:3px;width:100%;height:100%;object-fit:cover;max-height:380px}
+.mp img{width:100%;height:340px;object-fit:cover;border-radius:3px;margin:24px 0 16px}
+.ph{height:150px;background:#e3e9ed url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23aeb9c0'%3E%3Ccircle cx='12' cy='8' r='4'/%3E%3Cpath d='M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z'/%3E%3C/svg%3E") center/48px no-repeat;border-radius:3px;margin-bottom:12px}
+.tg{font-size:10px;letter-spacing:.12em;background:var(--b);padding:2px 8px;border-radius:2px;color:var(--g)}
+.org{text-align:center}.org .card{display:inline-block;width:260px;text-align:left}
+.ln{width:2px;height:28px;background:var(--l);margin:0 auto}.nt{background:var(--b);padding:12px 16px;border-radius:3px;font-size:13px;color:var(--g);margin-top:24px}
+.rw{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--l)}.rw b{min-width:110px;font-weight:600}
+.fl{display:flex;align-items:center;gap:10px;flex-direction:column;text-align:center}.fl div{width:100%;border:1px solid var(--l);background:#fff;padding:12px;border-radius:3px;font-size:13px}.fl .dkb{background:#6b6e70;color:#fff}
+.sn{display:inline-block;width:26px;height:26px;border-radius:50%;background:var(--i);color:#fff;text-align:center;line-height:26px;font-size:12px;margin-bottom:10px}
+.pl{display:flex;gap:8px;margin:0 0 20px}.pl button{border:1px solid var(--l);background:#fff;padding:5px 14px;border-radius:20px;cursor:pointer;font:12px Inter}.pl .on{background:var(--i);color:#fff}
+form label{display:block;font-size:12px;color:#555;margin-bottom:16px}
+input,select,textarea{width:100%;margin-top:6px;padding:11px 12px;border:1px solid var(--l);background:#faf9f5;border-radius:3px;font:14px Inter}
+textarea{min-height:90px;resize:vertical}.ck{display:flex!important;gap:8px;align-items:flex-start}.ck input{width:auto;margin:4px 0 0}
+form h3{margin:6px 0 18px}.sd{background:var(--b);border-radius:4px;padding:28px;align-self:start}.sd h3{font-size:26px;margin:6px 0 18px}
+.sd p{font-size:14px;margin-bottom:12px}.sd small{display:block;font-size:10px;letter-spacing:.12em;color:var(--g)}
+footer{background:#6b6e70;color:#eee;font-size:13px}footer .g4{grid-template-columns:1.6fr 1fr 1.2fr 1.2fr;padding:44px 28px 28px}
+footer h4{font:500 18px 'Playfair Display'}footer h5{font-size:11px;letter-spacing:.12em;margin-bottom:10px;color:#cfd2d3}footer li{margin-bottom:6px}
+footer img{height:80px;width:100%;object-fit:cover;border-radius:3px}.cp{display:flex;justify-content:space-between;border-top:1px solid rgba(255,255,255,.25);padding-top:16px;padding-bottom:22px;font-size:12px}
+@media(max-width:820px){.g2,.g3,.g4,.f2,footer .g4{grid-template-columns:1fr}.hr,.hf,.cp{flex-direction:column;align-items:flex-start}nav ul{display:none}.st{gap:28px}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="hero">
+  <div class="brand"><i class="logo"></i>POLITEKNIK NEGERI JEMBER</div>
+  <div class="hb">
+    <div class="lb">Profil Perusahaan</div>
+    <h1>TEFA CANNING POLIJE</h1>
+    <div class="hr">
+      <p>Teaching Factory (Tefa) adalah konsep pengajaran berbasis standar industri dalam lingkungan nyata. Di Politeknik Negeri Jember (Polije), terdapat Tefa Canning yang memproduksi pangan kaleng, salah satunya ikan sarden.</p>
+      <a class="btn" href="#" onclick="document.querySelector('nav').scrollIntoView({behavior:'smooth'});return false">Jelajahi profil kami ↗</a>
+    </div>
+  </div>
+  <div class="hf"><span>Politeknik Negeri Jember · Sejak 2015</span><span>Pembelajaran · Produksi · Penelitian · Kemitraan</span></div>
+</header>
+
+<nav>
+  <div class="w">
+    <a href="#home"><b>TEFA Canning Polije</b><small>Politeknik Negeri Jember</small></a>
+    <ul>
+      <li><a data-v="home" href="#home">Home</a></li>
+      <li><a data-v="organisasi" href="#organisasi">Organisasi</a></li>
+      <li><a data-v="kemitraan" href="#kemitraan">Kemitraan</a></li>
+      <li><a data-v="kunjungan" href="#kunjungan">Kunjungan</a></li>
+    </ul>
+    <a class="btn d" href="#kontak">Hubungi Kami ↗</a>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HOME ============ -->
+<section class="view" id="home">
+  <div class="w sec">
+    <h2 style="margin-bottom:36px">Mengenal hasilnya.<br>Memahami prosesnya.</h2>
+    <div class="g2" id="cards"></div>
+  </div>
+
+  <div class="dk"><div class="w sec g2">
+    <div><div class="lb">Pembelajaran &amp; Produksi</div><h2>Pembelajaran yang relevan. Pengolahan yang bernilai.</h2>
+    <p style="margin-top:16px;font-size:14px;color:#e2e4e5">Mahasiswa belajar langsung di lingkungan produksi berstandar industri.</p></div>
+    <ul class="ls">
+      <li><b>01</b>Menghubungkan pengalaman praktik sebagai bagian dari pembelajaran.</li>
+      <li><b>02</b>Menjalankan pengolahan pangan kaleng dengan standar industri.</li>
+      <li><b>03</b>Mendorong penelitian dan inovasi produk perikanan.</li>
+    </ul>
+  </div></div>
+
+  <div class="w sec g2 ab" style="align-items:center">
+    <div><div class="lb">Tentang Tefa Canning Polije</div><h2>Tempat ilmu bertemu dunia industri perikanan.</h2>
+    <p style="margin-top:16px;color:var(--g)">Teaching Factory Canning memadukan kegiatan belajar, produksi, dan penelitian dalam satu unit di Politeknik Negeri Jember, sehingga mahasiswa terbiasa dengan alur kerja industri sesungguhnya.</p>
+    <div class="st"><div><b>2015</b><small>MULAI BEROPERASI</small></div><div><b>1.500</b><small>KALENG / HARI (KAPASITAS)</small></div></div></div>
+    <img src="img/sarden-sip.jpg" alt="Produk sarden SIP Politeknik Negeri Jember">
+  </div>
+
+  <div class="w mp" style="padding-bottom:56px">
+    <div class="g2" style="align-items:end"><div><div class="lb">Lokasi Kami</div><h2>Temukan kami di Politeknik Negeri Jember.</h2></div>
+    <ul style="font-size:14px;color:var(--g)"><li>◉ Politeknik Negeri Jember, Jl. Mastrip, Jember</li><li>◉ Unit Pengolahan Ikan, kawasan TEFA Polije</li></ul></div>
+    <img src="img/peta-lokasi.jpg" alt="Peta lokasi">
+    <div class="g2"><div class="card"><div class="lb">Jam Layanan</div>Senin – Jumat, 08.00 – 16.00 WIB</div><div class="card"><div class="lb">Transportasi &amp; Parkir</div>Area parkir tersedia di depan unit produksi.</div></div>
+  </div>
+
+  <div class="bl"><div class="w g2" style="padding:36px 28px;align-items:center">
+    <div><h3 style="font-size:26px">Lihat lebih dekat, belajar secara langsung.</h3><p style="font-size:14px;color:var(--g)">Jadwalkan kunjungan untuk melihat proses produksi sarden kaleng.</p></div>
+    <div style="text-align:right"><a class="btn" href="#kunjungan">Jadwalkan kunjungan ↗</a></div>
+  </div></div>
+</section>
+
+<!-- ============ ORGANISASI ============ -->
+<section class="view" id="organisasi" hidden>
+  <div class="w sec">
+    <div class="g2" style="align-items:end;margin-bottom:40px"><div><div class="lb">Tim Pengelola</div><h2>Orang di balik setiap proses.</h2></div>
+    <p style="color:var(--g)">Setiap peran saling bersinergi dalam pembelajaran, produksi, serta pengembangan produk Tefa Canning Polije.</p></div>
+    <div class="org">
+      <div class="card"><div class="ph"></div><span class="tg">KETUA</span><h3 style="margin-top:8px;font-size:18px">M. Manfianto, S.TP., M.P.</h3></div>
+      <div class="ln"></div>
+      <div class="g4" style="text-align:left">
+        <div class="card"><div class="ph"></div><span class="tg">PRODUKSI</span><h3 style="margin-top:8px;font-size:17px">M. Fahmi Kurniata, S.TP., M.</h3></div>
+        <div class="card"><div class="ph"></div><span class="tg">MUTU</span><h3 style="margin-top:8px;font-size:17px">Syamil</h3></div>
+        <div class="card"><div class="ph"></div><span class="tg">TEKNISI</span><h3 style="margin-top:8px;font-size:17px">Gunawan</h3></div>
+        <div class="card"><div class="ph"></div><span class="tg">ADMINISTRASI</span><h3 style="margin-top:8px;font-size:17px">Afin Hariyanabu</h3></div>
+      </div>
+    </div>
+    <div class="nt">ⓘ Data foto dan nama dapat disesuaikan dengan struktur resmi unit.</div>
+  </div>
+  <div class="bl"><div class="w sec g2">
+    <div><div class="lb">Keterhubungan</div><h2>Terhubung dalam setiap tahap.</h2></div>
+    <div><div class="rw"><b>→ Perencanaan</b><span>Perencanaan kebutuhan dan jadwal produksi bersama tim pengelola.</span></div>
+    <div class="rw"><b>→ Produksi</b><span>Pelaksanaan proses dari bahan baku hingga produk kaleng.</span></div>
+    <div class="rw"><b>→ Kolaborasi</b><span>Pembelajaran, penelitian, dan kerja sama dengan mitra.</span></div></div>
+  </div></div>
+</section>
+
+<!-- ============ KEMITRAAN ============ -->
+<section class="view" id="kemitraan" hidden>
+  <div class="w sec g2" style="align-items:center">
+    <div><div class="lb">Kemitraan</div><h2 style="font-size:clamp(34px,4.4vw,54px)">Kolaborasi hari ini. Nilai tambah untuk esok.</h2>
+    <p style="margin:18px 0 24px;color:var(--g)">Tefa Canning Polije membuka kerja sama dengan industri, pemerintah, dan lembaga pendidikan.</p><a class="btn d" href="#kontak">Ajukan Kemitraan ↗</a></div>
+    <div class="bl card fl"><small class="lb">ALUR SINGKAT</small><div>Kebutuhan mitra</div>↓<div class="dkb">TEFA Canning Polije</div>↓<div>Solusi yang dikembangkan bersama</div></div>
+  </div>
+  <div class="w g3" style="padding:0 28px 64px">
+    <div class="card">▣ Pengolahan perikanan</div><div class="card">▣ Pengembangan produk</div><div class="card">▣ Pendidikan &amp; pelatihan</div>
+  </div>
+  <div class="bl"><div class="w sec">
+    <div class="lb">Ketentuan</div><h2 style="margin-bottom:28px">Ketentuan bergabung.</h2>
+    <div class="g3">
+      <div class="card"><span class="sn">1</span><h3>Pra-pemetaan</h3><p style="font-size:14px;color:var(--g)">Sampaikan kebutuhan dan tujuan kerja sama.</p></div>
+      <div class="card"><span class="sn">2</span><h3>Konsultasi teknis</h3><p style="font-size:14px;color:var(--g)">Diskusi ruang lingkup bersama tim pengelola.</p></div>
+      <div class="card"><span class="sn">3</span><h3>Konfirmasi &amp; kesepakatan</h3><p style="font-size:14px;color:var(--g)">Penetapan jadwal dan bentuk kerja sama.</p></div>
+    </div>
+    <div class="nt" style="background:#fff">ⓘ Ketentuan dapat disesuaikan dengan kebijakan resmi Politeknik Negeri Jember.</div>
+  </div></div>
+  <div class="w sec">
+    <div class="g2" style="align-items:end;margin-bottom:24px"><div><div class="lb">Jejak Kerja Sama</div><h2>Bertumbuh bersama mitra.</h2></div>
+    <p style="color:var(--g);font-size:14px">Daftar mitra Tefa Canning Polije berdasarkan tahun kerja sama.</p></div>
+    <div class="pl"><span style="font-size:11px;align-self:center;margin-right:6px">TAHUN</span><button class="on">Semua</button><button>2022</button><button>2023</button><button>2024</button></div>
+    <div class="g4" id="mitra"></div>
+  </div>
+  <div class="bl"><div class="w g2" style="padding:48px 28px;align-items:center">
+    <img src="img/tim-kemitraan.jpg" alt="Tim pengabdian masyarakat Tefa Canning" style="border-radius:3px">
+    <div><div class="lb">Mulai Kolaborasi</div><h2 style="font-size:32px;margin-bottom:16px">Ingin mengajukan kemitraan?</h2>
+    <ul style="font-size:14px;margin-bottom:22px"><li>✓ Isi formulir kontak dengan lengkap</li><li>✓ Tim kami menghubungi Anda</li><li>✓ Diskusikan bentuk kerja sama</li></ul>
+    <a class="btn" href="#kontak">Hubungi Kami ↗</a><a class="lk" href="#kunjungan">Rencanakan kunjungan</a></div>
+  </div></div>
+</section>
+
+<!-- ============ KUNJUNGAN ============ -->
+<section class="view" id="kunjungan" hidden>
+  <div class="w sec" style="padding-bottom:28px"><div class="lb">Kunjungan Belajar</div><h2>Rencanakan kunjungan belajar Anda.</h2>
+  <p style="margin-top:14px;color:var(--g);max-width:640px">Jadwalkan kunjungan untuk melihat langsung proses produksi. Tim pengelola akan menyesuaikan jadwal dan menghubungi Anda.</p></div>
+  <div class="w g2" style="grid-template-columns:1.7fr 1fr;padding-bottom:72px">
+    <form class="card" onsubmit="return ok(this)">
+      <h3>Data pemohon</h3>
+      <div class="f2"><label>Nama lengkap *<input required placeholder="Nama lengkap Anda"></label><label>Instansi / Sekolah *<input required placeholder="Nama instansi"></label>
+      <label>Email *<input type="email" required placeholder="nama@email.com"></label><label>Nomor WhatsApp *<input required placeholder="08xxxxxxxxxx"></label></div>
+      <h3>Rencana kunjungan</h3>
+      <div class="f2"><label>Tanggal kunjungan *<input type="date" required></label><label>Waktu kunjungan *<input type="time" required></label>
+      <label>Jumlah peserta *<input type="number" min="1" required placeholder="Contoh: 30"></label><label>Jenis kunjungan *<select><option>Studi banding</option><option>Kunjungan sekolah</option><option>Kunjungan industri</option></select></label></div>
+      <label>Tujuan kunjungan<textarea placeholder="Ceritakan tujuan kunjungan Anda"></textarea></label>
+      <label>Catatan tambahan<textarea placeholder="Informasi tambahan (opsional)"></textarea></label>
+      <label class="ck"><input type="checkbox" required>Saya setuju data ini digunakan untuk keperluan komunikasi dan penjadwalan.</label>
+      <button class="btn" type="submit">Kirim permohonan ↗</button><a class="lk" href="#kontak">Hubungi kami</a>
+    </form>
+    <aside class="sd"><small>KUNJUNGAN LANGSUNG</small><h3>Belajar dari proses nyata.</h3>
+      <small style="margin-bottom:12px">SETELAH ANDA MENGAJUKAN</small>
+      <p><b>01 Pemeriksaan pengajuan</b><br>Pengelola meninjau data dan rencana kunjungan.</p>
+      <p><b>02 Penentuan jadwal</b><br>Jadwal dikonfirmasi melalui email atau WhatsApp.</p>
+      <p><b>03 Pelaksanaan kunjungan</b><br>Peserta mengikuti pengenalan dan tur proses produksi.</p>
+      <p style="border-top:1px solid #cfd6da;padding-top:14px"><b>Butuh bantuan?</b><br><a href="#kontak" style="text-decoration:underline">Hubungi pengelola</a></p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ KONTAK ============ -->
+<section class="view" id="kontak" hidden>
+  <div class="w sec" style="padding-bottom:28px"><div class="lb">Hubungi Kami</div><h2>Mari mulai percakapan.</h2>
+  <p style="margin-top:14px;color:var(--g);max-width:640px">Sampaikan pertanyaan atau permintaan kerja sama. Tim pengelola TEFA Canning Polije siap menindaklanjuti.</p></div>
+  <div class="w g2" style="grid-template-columns:1.7fr 1fr;padding-bottom:72px">
+    <form class="card" onsubmit="return ok(this)">
+      <h3>Ceritakan kebutuhan Anda.</h3>
+      <div class="f2"><label>Nama lengkap *<input required placeholder="Nama lengkap Anda"></label><label>Instansi / Organisasi *<input required placeholder="Nama instansi"></label>
+      <label>Email *<input type="email" required placeholder="nama@email.com"></label><label>Nomor WhatsApp *<input required placeholder="08xxxxxxxxxx"></label></div>
+      <label>Topik pembicaraan *<select><option>Kemitraan</option><option>Kunjungan</option><option>Produk</option><option>Lainnya</option></select></label>
+      <label>Pesan *<textarea required placeholder="Tulis pesan Anda di sini"></textarea></label>
+      <label class="ck"><input type="checkbox" required>Saya setuju data ini digunakan untuk keperluan komunikasi.</label>
+      <button class="btn" type="submit">Kirim pesan ↗</button><a class="lk" href="#home">Kembali ke beranda</a>
+    </form>
+    <aside class="sd"><small>TEFA CANNING POLIJE</small><h3>Terhubung untuk tumbuh bersama.</h3>
+      <p><small>PENGELOLA</small>Politeknik Negeri Jember</p>
+      <p><small>ALAMAT</small>Jl. Mastrip, Krajan Timur, Sumbersari, Jember, Jawa Timur</p>
+      <p><small>JAM LAYANAN</small>Senin – Jumat, 08.00 – 16.00 WIB</p>
+      <p><small>EMAIL</small>tefacanning@polije.ac.id</p>
+      <p><small>WHATSAPP</small>08xx-xxxx-xxxx</p>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w g4">
+    <div><h4>TEFA Canning Polije</h4><p style="margin:8px 0 12px">Teaching Factory pengolahan pangan kaleng, Politeknik Negeri Jember.</p><small>Sejak 2015</small></div>
+    <div><h5>MENU</h5><ul><li><a href="#home">Home</a></li><li><a href="#organisasi">Organisasi</a></li><li><a href="#kemitraan">Kemitraan</a></li><li><a href="#kunjungan">Kunjungan</a></li></ul></div>
+    <div><h5>KONTAK</h5><ul><li>Jl. Mastrip, Jember</li><li>tefacanning@polije.ac.id</li><li><a href="#kontak">Formulir kontak</a></li></ul></div>
+    <div><h5>LOKASI</h5><img src="img/peta-lokasi.jpg" alt="Lokasi"></div>
+  </div>
+  <div class="w cp"><span>© 2026 TEFA Canning Polije</span><span>Politeknik Negeri Jember</span></div>
+</footer>
+
+<script>
+/* Navigasi antar halaman (hash) */
+const V=['home','organisasi','kemitraan','kunjungan','kontak'];
+function go(){
+  const h=(location.hash||'#home').slice(1),v=V.includes(h)?h:'home';
+  V.forEach(x=>document.getElementById(x).hidden=x!==v);
+  document.getElementById('hero').classList.toggle('in',v!=='home');
+  document.querySelectorAll('[data-v]').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+  scrollTo(0,0);
+}
+addEventListener('hashchange',go);go();
+
+/* Kartu Produk & Mesin (slider) */
+const D={
+  Produk:[["Sarden SIP Saus Tomat","sarden-saus-tomat.jpg","Sarden dengan saus tomat yang diolah higienis dan dikemas dalam kaleng oleh Teaching Factory."],
+          ["Sarden SIP Larutan Garam","sarden-sip.jpg","Sarden dalam larutan garam, diproduksi UPT Pengolahan dan Pengemasan Politeknik Negeri Jember."]],
+  Mesin:[["Seamer","mesin-seamer.jpg","Menutup kaleng secara rapat agar produk tahan lama dan aman."],
+         ["Retort (Autoclave)","proses-sterilisasi.jpg","Mensterilkan kaleng pada suhu dan tekanan tinggi sebelum dipasarkan."]]
+};
+Object.entries(D).forEach(([k,v])=>{
+  let i=-1;const c=document.createElement('article');c.className='card pc';document.getElementById('cards').append(c);
+  const r=d=>{i=(i+d+v.length)%v.length;const[t,im,x]=v[i];
+    c.innerHTML=`<div class="lb"><span>${k}</span><span>0${i+1}/0${v.length}</span></div><img src="img/${im}" alt="${t}"><div class="tr"><h3>${t}</h3><span><button data-d="-1">←</button><button data-d="1">→</button></span></div><p>${x}</p>`};
+  c.onclick=e=>{if(e.target.dataset.d)r(+e.target.dataset.d)};r(1);
+});
+
+/* Kartu mitra + filter tahun */
+const M=[["Nama mitra","Bidang kerja sama",2022],["Nama mitra","Bidang kerja sama",2023],["Nama mitra","Bidang kerja sama",2023],["Nama mitra","Bidang kerja sama",2024]];
+const mb=document.getElementById('mitra');
+function showM(y){mb.innerHTML=M.filter(m=>y==='Semua'||m[2]==y).map(m=>`<div class="card"><div class="ph" style="height:90px"></div><h3 style="font-size:17px">${m[0]}</h3><p style="font-size:13px;color:var(--g)">${m[1]}<br>Tahun ${m[2]}</p></div>`).join('')}
+document.querySelectorAll('.pl button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.pl button').forEach(x=>x.classList.remove('on'));b.classList.add('on');showM(b.textContent)});
+showM('Semua');
+
+/* Kirim formulir (simulasi) */
+function ok(f){alert('Terima kasih! Data Anda sudah kami terima.');f.reset();return false}
+</script>
+</body>
+</html>
